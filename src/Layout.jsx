@@ -1,29 +1,15 @@
 import { Routes, Route} from "react-router-dom";
 
 import Footer from "./features/home/components/Footer";
-import HomeScreen from "./features/home/screen/Home";
-import StoreScrren from "./features/store/Store";
-import CartScreen from "./features/cart/CartItem";
-import ArticlesScreen from "./features/Articles/Articlespage";
-import ArticleDetails from "./features/Articles/ArticleDetails";
-import CalculatorScreen from "./features/calculator/calculator";
-import MessageScreen from "./features/message/Message";
-import Navepar from "./features/navepar/Navepar";
+import Home from "./features/home/screen/Home";
 
 
 export default function Layout() {
   return (
     <div className="relative min-h-screen pb-17.5 sm:pb-14">
-     <Navepar/>
 
       <Routes>
-        <Route path="/" element={<HomeScreen />} />
-        <Route path="/articles" element={<ArticlesScreen />} />
-        <Route path="/article/:id" element={<ArticleDetails />} />
-        <Route path="/store" element={<StoreScrren />} />
-        <Route path="/calculator" element={<CalculatorScreen />} />
-        <Route path="/consulation" element={<MessageScreen />} />
-        <Route path="/cart" element={<CartScreen />} />
+        <Route path="/" element={<Home/>} />
       </Routes>
 
       <Footer />
