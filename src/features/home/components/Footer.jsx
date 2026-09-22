@@ -1,53 +1,22 @@
-
+import { ArrowUp } from "lucide-react";
+import { useContent } from "../../i18n/LanguageContext";
+import { profile } from "../../../data/content";
 
 export default function Footer() {
-  return (
-    <footer className={styles.footerWrapper}>
-      <div className={styles.container}>
-        <div className={styles.bottomSection}>
-          {/* Copyright & Info */}
-          <p className={styles.copyright}>
-            © {new Date().getFullYear()} Modern Portfolio. Built with React & Tailwind CSS.
-          </p>
+  const { lang, t } = useContent();
 
-          {/* Social Links & Navigation */}
-          <div className={styles.links}>
-            <a
-              href="https://github.com/skaepra"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.linkItem}
-            >
-              GitHub
-            </a>
-            <span>•</span>
-            <a
-              href="mailto:eng.ahmad.alshaar@gmail.com"
-              className={styles.linkItem}
-            >
-              Email
-            </a>
-            <span>•</span>
-            <a
-              href="https://www.linkedin.com/in/ahmad-al-shaar-b699aa427"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.linkItem}
-            >
-              LinkedIn
-            </a>
-          </div>
-        </div>
-      </div>
+  return (
+    <footer className="mx-auto flex w-full max-w-[90rem] flex-col items-start justify-between gap-3 px-4 py-6 text-sm text-muted-foreground sm:flex-row sm:items-center sm:px-6 lg:px-10">
+      <p>
+        © 2026 {profile.name[lang]}. {t.footer.rights}
+      </p>
+      <a
+        href="#top"
+        className="inline-flex h-10 items-center gap-1.5 rounded-lg px-3 text-sm font-medium transition-colors hover:bg-muted"
+      >
+        {t.footer.backToTop}
+        <ArrowUp className="size-4" aria-hidden="true" />
+      </a>
     </footer>
   );
 }
-
-const styles = {
-  footerWrapper: "  w-full absolute bottom-0 left-0 bg-slate-50 dark:bg-zinc-900 border-t border-zinc-300 dark:border-zinc-800 text-zinc-400 transition-colors duration-200 mt-auto",
-  container: "mx-auto max-w-5xl px-6 py-6 xl:px-0",
-  bottomSection: "flex flex-col sm:flex-row justify-between items-center text-xs text-zinc-400 gap-4",
-  copyright: "text-center sm:text-left text-zinc-600 dark:text-zinc-400 font-normal",
-  links: "flex gap-3 items-center text-blue-500 dark:text-red-400 sm:text-zinc-600 sm:dark:text-zinc-400 font-medium",
-  linkItem: "   hover:text-blue-600 dark:hover:text-red-400 transition-colors cursor-pointer",
-};

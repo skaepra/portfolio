@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 export default function useDarkMode() {
   const [mode, setMode] = useState(() => {
     const saved = localStorage.getItem("dark");
-    return saved === "light" ? "light" : "dark";
+    if (saved === "light" || saved === "dark") return saved;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   });
 
   useEffect(() => {
@@ -18,7 +19,6 @@ export default function useDarkMode() {
       root.classList.remove("dark");
     }
   }, [mode]);
-
 
   const toggleMode = () => {
     setMode((prev) => (prev === "light" ? "dark" : "light"));

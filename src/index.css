@@ -1,48 +1,163 @@
 @import "tailwindcss";
 
-@theme {
-  --breakpoint-xs: 480px;
-  --breakpoint-sm: 600px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 976px;
-  --breakpoint-xl: 1440px;
-}
-
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --font-sans: "Inter", "Noto Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+  --font-heading: "Inter", "Noto Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+
+  /* Light — warm paper over cool ink */
+  --color-background: #fcfcfa;
+  --color-foreground: #18232c;
+  --color-card: #ffffff;
+  --color-card-foreground: #18232c;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #18232c;
+  --color-primary: #18232c;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #f2e9df;
+  --color-secondary-foreground: #65411f;
+  --color-muted: #f1f2ef;
+  --color-muted-foreground: #56616a;
+  --color-accent: #f2e9df;
+  --color-accent-foreground: #18232c;
+  --color-destructive: #b42318;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #e0e3df;
+  --color-input: #d3d8d4;
+  --color-ring: #956031;
+  --color-surface: #f5f4f0;
+  --color-brand: #815127;
+  --color-amber: #d99a5e;
+  --color-amber-light: #e8b476;
+  --color-charcoal: #111a22;
+
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.8rem;
+}
+
+/* Dark — deep blue-charcoal with the same amber accent */
+.dark {
+  --color-background: #10181f;
+  --color-foreground: #f0f2f4;
+  --color-card: #17222b;
+  --color-card-foreground: #f0f2f4;
+  --color-popover: #17222b;
+  --color-popover-foreground: #f0f2f4;
+  --color-primary: #e8b476;
+  --color-primary-foreground: #111a22;
+  --color-secondary: #302b27;
+  --color-secondary-foreground: #edc296;
+  --color-muted: #1e2a34;
+  --color-muted-foreground: #afbbc5;
+  --color-accent: #2b3540;
+  --color-accent-foreground: #f0f2f4;
+  --color-destructive: #ff8a80;
+  --color-destructive-foreground: #111a22;
+  --color-border: #303d47;
+  --color-input: #3e4c58;
+  --color-ring: #e8b476;
+  --color-surface: #141e26;
+  --color-brand: #e8b476;
+}
+
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+
   body {
-    @apply bg-slate-50 text-zinc-900 transition-colors duration-200 dark:bg-zinc-900 dark:text-slate-100;
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-amber) 30%, transparent);
   }
 }
 
-/* متصفحات Chrome, Safari, Edge, Opera */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+/* Hero backdrop: a soft amber glow over a fine dot grid */
+.hero-bg {
+  background-image:
+    radial-gradient(
+      56rem 30rem at 85% -12%,
+      color-mix(in srgb, var(--color-amber) 16%, transparent),
+      transparent 62%
+    ),
+    radial-gradient(
+      40rem 26rem at -10% 115%,
+      color-mix(in srgb, var(--color-amber) 9%, transparent),
+      transparent 60%
+    ),
+    radial-gradient(var(--color-border) 1px, transparent 1.4px);
+  background-size:
+    auto,
+    auto,
+    26px 26px;
 }
 
-/* متصفح Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
-  appearance: textfield;
+.dark .hero-bg {
+  background-image:
+    radial-gradient(
+      56rem 30rem at 85% -12%,
+      color-mix(in srgb, var(--color-amber-light) 10%, transparent),
+      transparent 62%
+    ),
+    radial-gradient(
+      40rem 26rem at -10% 115%,
+      color-mix(in srgb, var(--color-amber-light) 6%, transparent),
+      transparent 60%
+    ),
+    radial-gradient(var(--color-border) 1px, transparent 1.4px);
+  background-size:
+    auto,
+    auto,
+    26px 26px;
 }
 
-/* تحديد نظام الألوان للمتصفح لتوافق الإكمال التلقائي */
-:root {
-  color-scheme: light dark;
+/* One orchestrated page-load reveal for the hero */
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* الضبط الأنيق للاكمال التلقائي ليدعم الثيمين */
-input:-webkit-autofill,
-textarea:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px #f8fafc inset !important; /* لون خلفية الـ Light (slate-50) */
-  -webkit-text-fill-color: #0f172a !important; /* لون خط الـ Light */
+.hero-rise {
+  animation: hero-rise 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-.dark input:-webkit-autofill,
-.dark textarea:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px #18181b inset !important; /* لون خلفية الـ Dark (zinc-900) */
-  -webkit-text-fill-color: #f4f4f5 !important; /* لون خط الـ Dark */
+.hero-rise-1 {
+  animation-delay: 90ms;
+}
+.hero-rise-2 {
+  animation-delay: 180ms;
+}
+.hero-rise-3 {
+  animation-delay: 270ms;
+}
+.hero-rise-4 {
+  animation-delay: 360ms;
+}
+.hero-rise-5 {
+  animation-delay: 450ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-rise {
+    animation: none;
+  }
 }
