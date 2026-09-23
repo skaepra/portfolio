@@ -1,5 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
-import { content } from "../../data/content";
+import { content, Html } from "../../data/content";
 
 const LanguageContext = createContext(null);
 
@@ -17,6 +17,16 @@ export function LanguageProvider({ children }) {
     const root = document.documentElement;
     root.lang = lang;
     root.dir = lang === "ar" ? "rtl" : "ltr";
+
+  const currentContent = Html[lang];
+  if (currentContent?.meta?.title) {
+    document.title = currentContent.meta.title;
+  }
+
+  const metaDescription = document.querySelector('meta[name="description"]');
+  if (metaDescription && currentContent?.meta?.description) {
+    metaDescription.setAttribute("content", currentContent.meta.description);
+  }
     try {
       localStorage.setItem("lang", lang);
     } catch {

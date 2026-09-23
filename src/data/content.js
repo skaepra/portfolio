@@ -1,10 +1,27 @@
 export const profile = {
-  name: { ar: "أحمد الشعار", en: "Ahmad Al-Shaar" },
+  name: { ar: "أحمد أبو الشعر", en: "Ahmad Abo Al-Shaar" },
   initial: { ar: "أ", en: "A" },
   email: "eng.ahmad.alshaar@gmail.com",
   github: "https://github.com/skaepra",
   linkedin: "https://www.linkedin.com/in/ahmad-al-shaar-b699aa427",
-  cv: "/cv.html",
+  cv: "/cv.pdf",
+};
+
+export const Html = {
+  ar: {
+    meta: {
+      title: "أحمد أبو الشعر | مطور واجهات أمامية",
+      description:
+        "أحمد أبو الشعر — مطور واجهات أمامية. بورتفوليو شخصي بالعربية والإنجليزية.",
+    },
+  },
+  en: {
+    meta: {
+      title: "Ahmad Abo Al-Shaar | Frontend Developer",
+      description:
+        "Ahmad Abo Al-Shaar — Frontend Developer. Personal portfolio in Arabic and English.",
+    },
+  },
 };
 
 export const skills = [
@@ -12,20 +29,19 @@ export const skills = [
   "TypeScript",
   "Next.js",
   "Tailwind CSS",
-  "Node.js",
-  "PostgreSQL",
-  "Figma",
+  "Asp.Net Wep Api",
+  "C#",
 ];
 
 export const content = {
   ar: {
     skip: "تخطي إلى المحتوى",
     nav: {
-      work: "أعمال مختارة",
+      work: "أعمالي",
       services: "خدماتي",
       experience: "الخبرة",
       about: "نبذة عني",
-      contact: "لنتحدث",
+      contact: "لنتواصل",
       openMenu: "فتح القائمة",
       closeMenu: "إغلاق القائمة",
       switchLanguage: "English",
@@ -39,14 +55,14 @@ export const content = {
     },
     hero: {
       eyebrow: "مطور واجهات أمامية · دمشق، سوريا",
-      hello: "مرحباً، أنا أحمد الشعار.",
+      hello: "مرحباً، أنا أحمد أبو الشعر",
       title: "واجهات تجعل خطوتك القادمة أبسط.",
       description:
-        "أساعد الشركات على تحويل أفكارها إلى مواقع ومتاجر ومنصات سهلة الاستخدام — مع اهتمام دقيق بمن يستخدمها.",
+        " بساعد أصحاب المشاريع والشركات على تحويل أفكارهم إلى مواقع ومتاجر ومنصات سهلة الاستخدام , مع اهتمام بالناس اللي رح تستخدمها.",
       viewWork: "استعرض أعمالي",
       contact: "لنتحدث",
       available: "متاح لمشاريع وفرص عمل جديدة",
-      portraitAlt: "رمز شخصي لأحمد الشعار",
+      portraitAlt: "رمز شخصي لأحمد أبو الشعر",
       caption: "عمل مدروس. اهتمام شخصي.",
     },
     trust: {
@@ -57,7 +73,7 @@ export const content = {
       eyebrow: "أعمال مختارة",
       title: "بعض الأفكار التي تحققت.",
       description:
-        "مواقع ومتاجر ومنصات بهدف واضح. استكشف ما يقدمه كل مشروع لمن يستخدمه.",
+        "مواقع ومتاجر ومنصات بهدف واضح. استكشف ما يقدمه كل مشروع و من يستخدمه.",
       live: "زيارة الموقع",
       source: "الكود على GitHub",
       builtWith: "بُني باستخدام",
@@ -101,53 +117,63 @@ export const content = {
     services: {
       eyebrow: "كيف يمكنني المساعدة",
       title: "الموقع المناسب لخطوتك القادمة.",
-      description: "تبدأ شيئاً جديداً أو تحسّن ما لديك؟ إليك حيث يمكنني المساعدة.",
-      note: "كل مشروع يبدأ باحتياجاتك، مع مراعاة العربية والإنجليزية وسهولة الاستخدام على الجوال من البداية.",
+      description:
+        "تبدأ شيئاً جديداً أو تحسّن ما لديك؟ إليك حيث يمكنني المساعدة.",
+      note: "كل مشروع يبدأ باحتياجاتك، مع مراعاة العربية والإنجليزية وسهولة الاستخدام على الجوال .",
       items: [
         {
-          title: "مواقع الأعمال",
+          title: "مواقع للشركات والمشاريع",
           description:
-            "منزل واضح لعملك: خدماتك، قصتك، وطريقة سهلة لعملائك للتواصل معك.",
+            "موقع يعرّف الناس بشغلك وخدماتك، ويخلّي الوصول إلك والتواصل معك أسهل.",
         },
         {
           title: "متاجر إلكترونية",
           description:
-            "مساعدة العملاء على اكتشاف المنتجات والطلب، مع أدوات عملية لإدارة الكتالوج والطلبات.",
+            "تجربة واضحة لتصفّح المنتجات وطلبها، مع أدوات تساعدك تدير منتجاتك وطلبات زبائنك.",
         },
         {
-          title: "تطبيقات ومنصات",
+          title: "منصات وأنظمة لإدارة العمل",
           description:
-            "تحويل المهام اليومية إلى مساحة عمل منظمة، من الحجوزات والطلبات إلى لوحات الفرق.",
+            "أدوات تنظّم شغلك اليومي، من الحجوزات والطلبات إلى متابعة المهام وإدارة فريقك.",
         },
       ],
     },
     process: {
       eyebrow: "العمل معاً",
-      title: "خطوات واضحة. تواصل مفتوح.",
-      description: "تعرف دائماً على ما نبنيه وما الذي يأتي بعده.",
+      title: "خطوات واضحة. تواصل دائِم",
+      description: "بتعرف وين وصلنا، وشو الخطوة الجاية.",
       items: [
         {
           title: "أفهم فكرتك",
-          description: "نتحدث عن أهدافك وعملائك وما يجب أن يفعله الموقع.",
+          description:
+            "منحكي عن هدفك، وعن الناس اللي رح تستخدم الموقع، وشو لازم يقدّم إلهم.",
         },
         {
           title: "أخطط وأبني",
-          description: "نحدد النطاق، ثم أبني الموقع وأشاركك التقدم لآرائك.",
+          description:
+            "منتّفق على تفاصيل المشروع، وببلّش بالتنفيذ مع مشاركة التقدّم وأخذ ملاحظاتك.",
         },
         {
-          title: "أطلق بثقة",
+          title: "أجهّز للإطلاق",
           description:
-            "نراجع التجربة على شاشات مختلفة، نستعد للإطلاق، ونناقش الخطوات التالية.",
+            "منراجع تجربة الاستخدام على الشاشات المختلفة، ومنجهّز الموقع للإطلاق ومنحكي عن الخطوات الجاية.",
         },
       ],
     },
     experience: {
       eyebrow: "الخبرة",
       title: "خبرة خلف العمل.",
-      description: "مشاريع مستقلة وبناء منتجات يومية.",
+      description: "مشاريع مستقلة وتجربة عمل ضمن فريق .",
       items: [
         {
-          period: "2024 — الآن",
+          period: "2024 — حتى الآن",
+          role: "مطور واجهات أمامية",
+          org: "ٌRenewable Systems",
+          description:
+            "ببني واجهة الموقع من البداية ضمن فريق المنتج، وبشتغل مع الفريق لتكون تجربة الاستخدام واضحة ومتناسقة.",
+        },
+        {
+          period: "2024 — حتى الآن",
           role: "مطور واجهات أمامية",
           org: "عمل مستقل",
           description:
@@ -159,35 +185,33 @@ export const content = {
       eyebrow: "نبذة عني",
       title: "مطور يمكنك التحدث إليه.",
       description:
-        "أهتم بالمنتج كاملاً: ما يحتاجه المستخدم، ووضوح عمله، وقدرته على النمو بثبات.",
-      linkedin: "عرض حسابي على LinkedIn",
-      capabilities: [
+        "معك أحمد مختص تطوير واجهات امامية بشتغل على شكل الموقع وتجربة المستخدم ,و بهتم بلتفاصيل و التواصل الناجح و ضمان رضا العميل.",
+        educationTitle: "الدراسة",
+      education: [
         {
-          title: "منتجات ويب مفيدة",
-          description: "تجارب واضحة ومتجاوبة مصممة حول من يستخدمها.",
-        },
-        {
-          title: "أساسات موثوقة",
-          description: "واجهات منظمة تبقى عملية عند الصيانة والتطوير.",
-        },
-        {
-          title: "عربي وإنجليزي",
-          description: "تجارب ثنائية اللغة بمحتوى طبيعي ودعم RTL صحيح.",
+          id: "edu-damascus",
+          title: "جامعة دمشق",
+          degree: "دبلوم تقاني · هندسة البرمجيات",
+          institution: "خريج المعهد التقاني للحاسوب",
+          period: "أكتوبر 2024 — فبراير 2026",
+          logo: "/damascus-university.jpg",
         },
       ],
       skillsTitle: "للفرق التي توظف",
-      skillsDescription: "أدواتي الأساسية في التطوير. المشاريع أعلاه توضح كيف أوظفها.",
+      skillsDescription:
+        "أدواتي الأساسية في التطوير. المشاريع أعلاه توضح كيف أوظفها.",
     },
     contact: {
       eyebrow: "مشروعك القادم",
-      title: "لنصنع شيئاً مفيداً.",
-      description: "لديك فكرة، أو موقع تريد تحسينه، أو دور في فريقك؟ أخبرني قليلاً عنها.",
+      title: "لنبني شي مفيد.",
+      description:
+        "لديك فكرة، أو موقع تريد تحسينه، أو فرصة في فريقك؟ أخبرني عنها.",
       email: "راسلني",
       cv: "تحميل السيرة الذاتية",
       note: "استفسارات المشاريع وفرص العمل مرحب بها.",
     },
     footer: {
-      rights: "صُنع بعناية في دمشق.",
+      rights: "من دمشق، بكل اهتمام.",
       backToTop: "العودة للأعلى",
     },
   },
@@ -213,19 +237,23 @@ export const content = {
     },
     hero: {
       eyebrow: "Frontend developer · Damascus, Syria",
-      hello: "Hello, I'm Ahmad Al-Shaar.",
+      hello: "Hello, I'm Ahmad Abo Al-Shaar.",
       title: "Interfaces that make your next step simpler.",
       description:
         "I help businesses turn ideas into easy-to-use websites, stores, and platforms — with care for the people using them.",
       viewWork: "Explore my work",
       contact: "Let's talk",
       available: "Open to projects & career opportunities",
-      portraitAlt: "Personal monogram of Ahmad Al-Shaar",
+      portraitAlt: "Personal monogram of Ahmad Abo Al-Shaar",
       caption: "Thoughtful work. Personal attention.",
     },
     trust: {
       label: "What you can expect",
-      items: ["Arabic & English", "Built for every screen", "From idea to launch"],
+      items: [
+        "Arabic & English",
+        "Built for every screen",
+        "From idea to launch",
+      ],
     },
     work: {
       eyebrow: "Selected work",
@@ -275,7 +303,8 @@ export const content = {
     services: {
       eyebrow: "How I can help",
       title: "The right website for your next step.",
-      description: "Starting something new or improving what you have? Here's where I can help.",
+      description:
+        "Starting something new or improving what you have? Here's where I can help.",
       note: "Every project starts with your needs, with Arabic, English, and mobile usability considered from the beginning.",
       items: [
         {
@@ -302,11 +331,13 @@ export const content = {
       items: [
         {
           title: "Understand your idea",
-          description: "We talk about your goals, your customers, and what the site needs to do.",
+          description:
+            "We talk about your goals, your customers, and what the site needs to do.",
         },
         {
           title: "Plan and build",
-          description: "We agree on scope, then I build and share progress for your feedback.",
+          description:
+            "We agree on scope, then I build and share progress for your feedback.",
         },
         {
           title: "Launch with confidence",
@@ -323,6 +354,13 @@ export const content = {
         {
           period: "2024 — Present",
           role: "Frontend Developer",
+          org: "Renewable Systems",
+          description:
+            "Building the product’s web interface from the ground up as part of the core team, with a focus on a consistent, dependable experience.",
+        },
+        {
+          period: "2024 — Present",
+          role: "Frontend Developer",
           org: "Freelance",
           description:
             "Building daily product interfaces in Arabic and English, with a focus on clarity and fast loading.",
@@ -334,28 +372,27 @@ export const content = {
       title: "A developer you can talk to.",
       description:
         "I care about the whole product: what people need, how clearly it works, and how reliably it can grow.",
-      linkedin: "View my LinkedIn",
-      capabilities: [
+        educationTitle: "Education",
+      education: [
         {
-          title: "Useful web products",
-          description: "Clear, responsive experiences designed around the people who use them.",
-        },
-        {
-          title: "Reliable foundations",
-          description: "Well-structured frontends that remain practical to maintain and grow.",
-        },
-        {
-          title: "Arabic & English",
-          description: "Complete bilingual experiences with natural content and proper RTL support.",
+          id: "edu-damascus",
+          title: "Damascus University",
+          degree: "Technical Diploma · Software Engineering",
+          institution:
+            "Graduate of the Technical Computer Institute",
+          period: "Oct 2024 — Feb 2026",
+          logo: "/damascus-university.jpg",
         },
       ],
       skillsTitle: "For hiring teams",
-      skillsDescription: "My main development tools. The projects above show how I put them to work.",
+      skillsDescription:
+        "My main development tools. The projects above show how I put them to work.",
     },
     contact: {
       eyebrow: "Your next project",
       title: "Let's make something useful.",
-      description: "Have an idea, a site to improve, or a role on your team? Tell me a little about it.",
+      description:
+        "Have an idea, a site to improve, or a role on your team? Tell me a little about it.",
       email: "Email me",
       cv: "Download CV",
       note: "Project enquiries and career opportunities are welcome.",

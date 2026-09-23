@@ -90,7 +90,7 @@
       transparent 62%
     ),
     radial-gradient(
-      40rem 26rem at -10% 115%,
+      140rem 26rem at -10% 115%,
       color-mix(in srgb, var(--color-amber) 9%, transparent),
       transparent 60%
     ),
@@ -104,8 +104,8 @@
 .dark .hero-bg {
   background-image:
     radial-gradient(
-      56rem 30rem at 85% -12%,
-      color-mix(in srgb, var(--color-amber-light) 10%, transparent),
+      30rem 30rem at 78% 22%,
+      color-mix(in srgb, var(--color-amber-light) 12%, transparent),
       transparent 62%
     ),
     radial-gradient(

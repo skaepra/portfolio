@@ -16,7 +16,7 @@ export default function Portfolio() {
     <div id="top" className="min-h-screen scroll-pt-24">
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:start-4 focus:z-50 focus:rounded-lg focus:bg-primary focus:px-4 focus:py-3 focus:text-sm focus:font-medium focus:text-primary-foreground"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:start-4 focus:z-50 focus:rounded-lg focus:bg-primary focus:px-4 focus:py-3 focus:text-sm focus:font-medium focus:text-primary-foreground "
       >
         {t.skip}
       </a>

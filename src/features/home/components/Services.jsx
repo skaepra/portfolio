@@ -26,7 +26,7 @@ export default function Services() {
                 key={item.title}
                 className="flex flex-col gap-4 rounded-xl bg-card py-6 text-sm text-card-foreground ring-1 ring-foreground/10"
               >
-                <div className="flex flex-col gap-4 px-6">
+                <div className="flex flex-col gap-4 px-6 items-start">
                   <Badge>
                     <Icon className="size-3.5" aria-hidden="true" />
                   </Badge>

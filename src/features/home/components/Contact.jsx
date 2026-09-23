@@ -8,7 +8,12 @@ export default function Contact() {
   const { t } = useContent();
 
   return (
-    <section id="contact" tabIndex={-1} className="bg-surface py-12 lg:py-16" aria-labelledby="contact-title">
+    <section
+      id="contact"
+      tabIndex={-1}
+      className="bg-surface py-12 lg:py-16"
+      aria-labelledby="contact-title"
+    >
       <div className="mx-auto grid w-full max-w-[90rem] items-center gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-10">
         <SectionHeading
           eyebrow={t.contact.eyebrow}
@@ -16,6 +21,7 @@ export default function Contact() {
           description={t.contact.description}
           id="contact-title"
         />
+        
 
         <div className="flex min-w-0 flex-col items-start gap-3">
           <div className="flex flex-wrap gap-3">
@@ -23,7 +29,14 @@ export default function Contact() {
               <Mail className="size-4" aria-hidden="true" />
               {t.contact.email}
             </Button>
-            <Button href={profile.cv} variant="outline" size="lg" target="_blank" rel="noopener noreferrer">
+            <Button
+              href={profile.cv}
+              download="Ahmad_Abo_AlShaar_CV.pdf"
+              variant="outline"
+              size="lg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FileText className="size-4" aria-hidden="true" />
               {t.contact.cv}
             </Button>
@@ -42,10 +55,20 @@ export default function Contact() {
           </p>
 
           <div className="flex flex-wrap gap-1">
-            <Button href={profile.github} variant="ghost" target="_blank" rel="noopener noreferrer">
+            <Button
+              href={profile.github}
+              variant="ghost"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               GitHub
             </Button>
-            <Button href={profile.linkedin} variant="ghost" target="_blank" rel="noopener noreferrer">
+            <Button
+              href={profile.linkedin}
+              variant="ghost"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               LinkedIn
             </Button>
           </div>

@@ -16,7 +16,7 @@ export default function ProjectCard({ project, index }) {
           <ProjectPreview variant={project.preview} alt={t.work.preview.replace("{name}", project.name)} />
         </div>
 
-        <div className="flex flex-col gap-3 px-6 pt-5">
+        <div className="flex flex-col gap-3 px-6 pt-5 items-start">
           <Badge>{project.category}</Badge>
           <h3
             id={`project-${index}`}
